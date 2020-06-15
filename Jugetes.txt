@@ -1,0 +1,66 @@
+Nombre: Uno Cartas
+Material: Carton
+Tamanio: pequenio 5x15x16
+Modelo: GDJ85
+Pilas: No
+Compania: Mattel
+
+https://images-na.ssl-images-amazon.com/images/I/81TX8WTjiuL._AC_SX466_.jpg
+
+
+
+Nombre: Super Station
+Material: Plastico
+Tamanio: Grande 132x114x91
+Modelo: FPM59
+Pilas: No
+Compania: Fisher Price
+
+https://images-na.ssl-images-amazon.com/images/I/81xFeXSq3%2BL._AC_SL1500_.jpg
+
+
+Nombre: Fornite TS-R
+Material: Plastico
+Tamanio: Mediano 6x65x26
+Modelo: E6876
+Pilas: No
+Compania: NERF
+
+https://images-na.ssl-images-amazon.com/images/I/71LzaJ-JrZL._AC_SL1500_.jpg
+
+
+Nombre: Caja Registradora
+Material: Plastico
+Tamanio: Mediano 14x10x8
+Modelo: LER2690
+Pilas: Si
+Compania: Learning Resources
+
+https://images-na.ssl-images-amazon.com/images/I/81geNSS9qmL._AC_SL1500_.jpg
+
+Nombre: Armadura Iron Man
+Material: Plastico
+Tamanio: Mediano 14x19x4
+Modelo: 6289052
+Pilas: No
+Compania: LEGO
+
+https://images-na.ssl-images-amazon.com/images/I/81upnTLXz5L._AC_SL1500_.jpg
+
+Nombre: Casa de los Suenios
+Material: Plastico
+Tamanio: Grande 39x101x116
+Modelo: FHY73
+Pilas: No
+Compania: Barbie
+
+https://images-na.ssl-images-amazon.com/images/I/71vP-AknQqL._AC_SL1200_.jpg
+
+Nombre: Torre de Beber The Simpsons
+Material: Madera
+Tamanio: Mediano 7x16x23
+Modelo: RO1020
+Pilas: No
+Compania: Novelty Corp
+
+https://images-na.ssl-images-amazon.com/images/I/51zV1MlQojL._AC_.jpg

@@ -1,6 +1,7 @@
 # Proyecto Final
+## Tema: **Juguetes**
 
-- Equipo: **Los del Gulag**
+- Equipo: **Gulag**
 
 - Integrantes:
   - ***Lara Hernández Raúl***

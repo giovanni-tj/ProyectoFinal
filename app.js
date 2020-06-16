@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose=require('mongoose');
-mongoose.connect('mongodb+srv://giovanni_tj:Pirata_22@cluster0-cr49l.gcp.mongodb.net/autosdb?retryWrites=true&w=majority',{useNewUrlParser:true}).then(
+mongoose.connect('mongodb+srv://usuario1:4asmvGyl0Kq1U5c5@cluster0-pxn5q.mongodb.net/jugueteria?retryWrites=true&w=majority',{useNewUrlParser:true}).then(
 	()=>{
 		console.log('Conectado');
 	}

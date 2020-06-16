@@ -2,12 +2,12 @@
 <p>	Bienvenido a la aplicaci&oacute;n {{title}}</p>
 <div class="container">
 	<div class="row">
-		<div class="col col-6"><div class="alert alert-success">Div 1</div></div>
-		<div class="col col-6"><div class="alert alert-info">Div 2</div></div>
+		<div class="col col-5"><div class="alert alert-success">Llena los campos para registrar un juguete nuevo.</div></div>
+
 	</div>
 </div>
 <hr>
-<form action="/alta" method="POST">
+<!-- <form action="/alta" method="POST">
 	<div class="row">
 		<div class="col">
 			<input type="text" class="form-control" name="nombre">
@@ -17,4 +17,72 @@
 		</div>
 		<button type="submit" class="btn btn-primary">Enviar</button>
 	</div>
+	<div class="row">
+		<div class="col">
+			<input type="text" class="form-control" name="material">
+		</div>
+		<div class="col">
+			<input type="text" class="form-control" name="tamanio">
+		</div>
+		<div class="col">
+			<input type="text" class="form-control" name="modelo">
+		</div>
+		<div class="col">
+			<input type="text" class="form-control" name="pilas">
+		</div>
+		<div class="col">
+			<input type="text" class="form-control" name="compania">
+		</div>
+	</div>
+</form>
+-->
+
+<form form action="/alta" method="POST">
+	<div class="row">
+		<div class="col">
+			  <label for="fname">Nombre:</label><br>
+			<input type="text" id="fname" class="form-control" name="nombre" >
+		</div>
+		<div class="col">
+			<label for="mat">Material:</label><br>
+			<input type="text" id="mat" class="form-control" name="material" >
+		</div>
+		<div class="col">
+			<label for="tam">Tamaño:</label><br>
+			<input type="text" id="tam" class="form-control" name="tamanio" >
+		</div>
+		<div class="col">
+			<label for="modl">Modelo:</label><br>
+			<input type="text" id="modl" class="form-control" name="modelo">
+		</div>
+		<div class="col">
+			<label for="pila">Pilas:</label><br>
+			<input type="text" id="pila" class="form-control" name="pilas" >
+		</div>
+		<div class="col">
+			<label for="comp">Compañia:</label><br>
+			<input type="text" id="comp" class="form-control" name="compania">
+		</div>
+		<div class="col">
+			<label for="foto">URL Foto:</label><br>
+			<input type="text" id="foto" class="form-control" name="foto" ><br><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<label for="desc">Descripcion:</label><br>
+			<input type="text" id="desc" class="form-control" name="descripcion" ><br><br>
+		</div>
+	</div>
+  	<button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+<hr>
+<form form action="/jugueteId" method="delete">
+	<div class="row">
+		<div class="col">
+			<label for="del">Eliminar por Id:</label><br>
+			<input type="text" id="del" class="form-control" name="_id" ><br><br>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-primary">Enviar</button>
 </form>

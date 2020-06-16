@@ -1,16 +1,10 @@
 <div class="container">
 	<div class="jumbotron">
-	<h1 class="display-3">Automoviles</h1>
-	<p class="lead">En esta pagina encontrará los mejores Automoviles.</p>
+	<h1 class="display-3">Jugueteria</h1>
+	<p class="lead">Los mejores Juguetes.</p>
 	<nav  class="navbar navbar-dark bg-dark">
-  <a class="nav-link active" href="#">Inicio</a>
-  <a class="nav-link" href="/mercedesBenz">Mercedes Benz</a>
-  <a class="nav-link" href="/mazda">Mazda</a>
-	<a class="nav-link" href="#">Ferrari</a>
-	<a class="nav-link" href="#">Porsche</a>
-	<a class="nav-link" href="#">Aston Martín</a>
-  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-	<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  <a class="nav-link active" href="/">Agregar Nuevo</a>
+
 	<form class="form-inline">
 	 <input class="form-control mr-sm-2" type="search" placeholder="Busqueda" aria-label="Search">
 	 <button class="btn btn-outline-primary" type="submit">Buscar</button>
@@ -19,13 +13,19 @@
 	<hr>
 
 	<div class="card-columns">
-		{{#each autos}}
+		{{#each juguetes}}
 	<div class="card">
 		<img src="{{foto}}" class="card-img-top">
 		<div class="card-body">
 			<h5 class="card-tittle">{{nombre}}</h5>
-			<p class="card-text" >Es un automovil deportivo diseñado bajo el último concepto de diseño que presento la compañia en el último Salón del
-			 automovil de Francfort.</p>
+			<p class="card-text" >{{descripcion}}</p>
+			<ul>
+				<li>Material: {{material}}</li>
+				<li>Tamaño: {{tamanio}}</li>
+				<li>Modelo: {{modelo}}</li>
+				<li>Pilas: {{pilas}}</li>
+				<li>Compañia: {{compania}}</li>
+			</ul>
 		</div>
 	</div>
 	{{/each}}

@@ -8,14 +8,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Juguetes' });
 });
 
-/*router.get('/mazda',function(req,res,next){
-	var infoMazda={};
-	infoMazda.pais="Japón";
-	infoMazda.sectorVentas='comercial';
-	infoMazda.anioFundacion=1929;
-	infoMazda.logo="https://www.mazda.mx/siteassets/mazda-mx/logos-new-mazda/mazda-logo-desktop-2.png";
-	console.log(infoMazda);
-	res.render('mazda',infoMazda);
+/*router.get('/juguete',function(req,res,next){
+	var infojuguete={};
+	infojuguete.pais="Japón";
+	infojuguete.sectorVentas='comercial';
+	infojuguete.anioFundacion=1929;
+	infojuguete.logo="https://www.juguete.mx/siteassets/juguete-mx/logos-new-juguete/juguete-logo-desktop-2.png";
+	console.log(infojuguete);
+	res.render('juguete',infojuguete);
 });
 
 router.get('/mercedesBenz',function(req,res,next){
@@ -51,14 +51,12 @@ router.post('/alta',function(req,res,next){
 });
 
 
-router.delete('/jugueteId',(req,res,next)=>{
-
-Juguete.findOneAndDelete({
-  '_id':(req.params._id)},(err,datos)=>{
-  if(err) res.status(404).json(err);
-  else res.status(200).json(datos);
-});
-
+router.delete('/jug/:jugueteId',function(req,res,next){
+  Juguete.findById(req,params.jugueteId,function(err,data){
+    data.remove(function(err){
+      res.render('datos',data);
+    });
+  });
 });
 
 module.exports = router;

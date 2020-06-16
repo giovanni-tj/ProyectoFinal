@@ -13,6 +13,7 @@ mongoose.connect('mongodb+srv://usuario1:4asmvGyl0Kq1U5c5@cluster0-pxn5q.mongodb
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var galeriaRouter=require('./routes/galeria');
+var deleteRouter=require('./models/juguetes');
 var app = express();
 
 // view engine setup
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/galeria',galeriaRouter);
+app.use('/jug',deleteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

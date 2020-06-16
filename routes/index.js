@@ -51,12 +51,4 @@ router.post('/alta',function(req,res,next){
 });
 
 
-router.delete('/jug/:jugueteId',function(req,res,next){
-  Juguete.findById(req,params.jugueteId,function(err,data){
-    data.remove(function(err){
-      res.render('datos',data);
-    });
-  });
-});
-
 module.exports = router;

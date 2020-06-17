@@ -1,7 +1,6 @@
 var mongoose=require('mongoose');
 var Schema=mongoose.Schema;
 
-
 var Juguetes=Schema({
 	nombre:String,
 	material:String,
@@ -12,6 +11,5 @@ var Juguetes=Schema({
 	foto:String,
 	descripcion:String
 });
-
 
 module.exports=mongoose.model('Juguete',Juguetes);

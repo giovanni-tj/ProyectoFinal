@@ -11,30 +11,7 @@ var assert = require('assert');
 var url = 'mongodb://localhost:3000/test';
 
 router.get('/juguete',function(req,res,next){
-	/*var data={autos:[]};
-	var auto={};
-	auto.nombre="juguete 3";
-	auto.foto="https://www.juguete.mx/siteassets/juguete-mx/mycos-2019/juguete-3-sedan/galeria/juguete-3-sedan-galeria-21.jpg";
-	data.autos.push(auto);
 
-	auto=null;
-	auto={};
-	auto.nombre="juguete 6";
-	auto.foto="https://www.juguete.mx/siteassets/juguete-mx/mycos-2020/juguete6/galeria/juguete-6-galeria-11.jpg";
-	data.autos.push(auto);
-
-	auto=null;
-	auto={};
-	auto.nombre="juguete CX-3";
-	auto.foto="https://www.juguete.mx/siteassets/juguete-mx/mycos-2019/juguete-cx-3/galeria/juguete-cx-3-2019-galeria-17.jpg";
-	data.autos.push(auto);
-
-	Juguete.find({},function(err,data){
-		var x={Juguete:data};
-		res.render("./galeria/juguete",x);
-	});
-
-	*/
 	Juguete.find({},function(err,data){
 		var x={juguetes:data};
 		res.render("./galeria/juguete",x);
@@ -58,18 +35,14 @@ router.get('/',function(req,res,next){
 	});
 	});
 
-/*
-function actualizar(nombre,material,tamanio,modelo,pilas,compania,foto,descripcion){
-	Juguete.findOneAndUpdate({modelo:modelo},
-{nombre:nombre,material:material,tamanio:tamanio,modelo,pilas,compania,foto,descripcion}
-	)
+	router.put('/:jugueteId',(req,res,next)=>{
+	Juguete.findByIdAndUpdate({'_id':(req.params.jugueteId)},(err,productUpdate)=>{
+		if(err) res.status(404).json(err);
+		else res.status(200).json(productUpdate);
+	});
+	});
 
-}
-*/
-
-
-
-router.post('/update', function(req, res, next) {
+/*router.post('/update', function(req, res, next) {
   var item = {
     nombre: req.body.nombre,
 		material: req.body.material,
@@ -91,16 +64,5 @@ router.post('/update', function(req, res, next) {
     });
   });
 });
-
-
-/*
-nombre:String,
-material:String,
-tamanio:String,
-modelo:String,
-pilas:String,
-compania:String,
-foto:String,
-descripcion:String
 */
 module.exports = router;

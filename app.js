@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://usuario1:4asmvGyl0Kq1U5c5@cluster0-pxn5q.mongodb
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var galeriaRouter=require('./routes/galeria');
+var inicioRouter=require('./routes/inicio');
 var deleteRouter=require('./models/juguetes');
 var app = express();
 
@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/galeria',galeriaRouter);
+app.use('/inicio',inicioRouter);
 app.use('/jug',deleteRouter);
 
 app.use(function(req, res, next) {

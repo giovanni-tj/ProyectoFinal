@@ -14,7 +14,7 @@ router.get('/juguete',function(req,res,next){
 
 	Juguete.find({},function(err,data){
 		var x={juguetes:data};
-		res.render("./galeria/juguete",x);
+		res.render("./inicio/juguete",x);
 	});
 });
 
@@ -42,27 +42,4 @@ router.get('/',function(req,res,next){
 	});
 	});
 
-/*router.post('/update', function(req, res, next) {
-  var item = {
-    nombre: req.body.nombre,
-		material: req.body.material,
-		tamanio: req.body.tamanio,
-		modelo: req.body.modelo,
-		pilas: req.body.pilas,
-    compania: req.body.compania,
-		descripcion: req.body.descripcion,
-    foto: req.body.foto
-  };
-  var id = req.body.id;
-
-  mongo.connect(url, function(err, db) {
-    assert.equal(null, err);
-    db.collection('juguetes').updateOne({"_id": objectId(id)}, {$set: item}, function(err, result) {
-      assert.equal(null, err);
-      console.log('Item updated');
-      db.close();
-    });
-  });
-});
-*/
 module.exports = router;

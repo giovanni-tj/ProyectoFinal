@@ -3,6 +3,12 @@ var router = express.Router();
 var mongoose=require('mongoose');
 var Juguete=require('../models/juguetes');
 
+var mongo = require('mongodb').MongoClient;
+var objectId = require('mongodb').ObjectID;
+
+var assert = require('assert');
+
+var url = 'mongodb://localhost:3000/test';
 
 router.get('/juguete',function(req,res,next){
 	/*var data={autos:[]};
@@ -52,4 +58,49 @@ router.get('/',function(req,res,next){
 	});
 	});
 
+/*
+function actualizar(nombre,material,tamanio,modelo,pilas,compania,foto,descripcion){
+	Juguete.findOneAndUpdate({modelo:modelo},
+{nombre:nombre,material:material,tamanio:tamanio,modelo,pilas,compania,foto,descripcion}
+	)
+
+}
+*/
+
+
+
+router.post('/update', function(req, res, next) {
+  var item = {
+    nombre: req.body.nombre,
+		material: req.body.material,
+		tamanio: req.body.tamanio,
+		modelo: req.body.modelo,
+		pilas: req.body.pilas,
+    compania: req.body.compania,
+		descripcion: req.body.descripcion,
+    foto: req.body.foto
+  };
+  var id = req.body.id;
+
+  mongo.connect(url, function(err, db) {
+    assert.equal(null, err);
+    db.collection('juguetes').updateOne({"_id": objectId(id)}, {$set: item}, function(err, result) {
+      assert.equal(null, err);
+      console.log('Item updated');
+      db.close();
+    });
+  });
+});
+
+
+/*
+nombre:String,
+material:String,
+tamanio:String,
+modelo:String,
+pilas:String,
+compania:String,
+foto:String,
+descripcion:String
+*/
 module.exports = router;
